@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy entrypoint into `/opt`
 COPY entrypoint.sh /opt/entrypoint.sh
+RUN chmod +x /opt/entrypoint.sh
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/opt/entrypoint.sh"]
